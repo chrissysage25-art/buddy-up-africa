@@ -1,7 +1,7 @@
 import FadeContent from "./FadeContent";
 import {
-  Shield, Heart, Dumbbell, Users, BookOpen,
-  Compass, GraduationCap, Baby, MessageCircle, Calendar
+  Shield, Heart, Dumbbell, BookOpen,
+  GraduationCap, Baby, MessageCircle, Calendar
 } from "lucide-react";
 
 const benefits = [
@@ -9,49 +9,49 @@ const benefits = [
     icon: Shield,
     title: "Private Discord Society",
     description: "Connect with fellow founders in a secure, privacy-first community. No intrusion, just genuine connections.",
-    color: "text-primary",
+    color: "text-electric-teal",
   },
   {
     icon: MessageCircle,
     title: "Everyday Community Support",
     description: "Share your painful, regretful and joyful moments — business or personal. No judging, only support and honest advice.",
-    color: "text-earth-green",
+    color: "text-vibrant-coral",
   },
   {
     icon: Heart,
     title: "Weekly Therapy Sessions",
     description: "Choose single, member group, or family sessions tailored to your needs. Professional care, your way.",
-    color: "text-terracotta",
+    color: "text-soft-violet",
   },
   {
     icon: Dumbbell,
     title: "Fitness & Accountability",
     description: "Get a home workout/gym accountability partner (your Buddy!) plus a dedicated coach with personalised routines.",
-    color: "text-primary",
+    color: "text-lime-pop",
   },
   {
     icon: Calendar,
     title: "Bi-Annual Outdoor Events",
     description: "Family games, competitions, travel, tours & sightseeing across Africa — twice a year, unforgettable experiences.",
-    color: "text-golden",
+    color: "text-golden-energy",
   },
   {
     icon: GraduationCap,
     title: "Youth Founder Mentorship",
     description: "Youth founders get guidance from experienced leaders. Experienced founders build Africa's next generation of leaders.",
-    color: "text-earth-green",
+    color: "text-electric-teal",
   },
   {
     icon: BookOpen,
     title: "Monthly Book Club",
     description: "Monthly book reviews and discussions designed to increase self-value and sharpen your entrepreneurial mind.",
-    color: "text-terracotta",
+    color: "text-vibrant-coral",
   },
   {
     icon: Baby,
     title: "Child Education Mission",
     description: "Be part of a larger mission to improve child education & development across Africa. Impact beyond business.",
-    color: "text-primary",
+    color: "text-soft-violet",
   },
 ];
 

@@ -11,7 +11,7 @@ const BuddyNavbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container flex items-center justify-between h-16">
         <a href="#" className="font-display text-2xl font-bold text-gradient-warm">
-          Buddy
+          Buddy.com
         </a>
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
@@ -20,7 +20,7 @@ const BuddyNavbar = () => {
             </a>
           ))}
           <a href="#join" className="bg-primary text-primary-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:opacity-90 transition-opacity">
-            Join Buddy
+            Join Buddy.com
           </a>
         </div>
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
@@ -42,7 +42,7 @@ const BuddyNavbar = () => {
                 </a>
               ))}
               <a href="#join" onClick={() => setOpen(false)} className="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center">
-                Join Buddy
+                Join Buddy.com
               </a>
             </div>
           </motion.div>

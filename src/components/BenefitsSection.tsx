@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import FadeContent from "./FadeContent";
 import {
   Shield, Heart, Dumbbell, Users, BookOpen,
   Compass, GraduationCap, Baby, MessageCircle, Calendar
@@ -55,51 +55,35 @@ const benefits = [
   },
 ];
 
-const container = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.1 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
-
 const BenefitsSection = () => {
   return (
     <section id="benefits" className="py-24 md:py-32 bg-cream-gradient">
       <div className="container">
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">What You Get</p>
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
-            Everything a Founder <span className="italic text-primary">Needs</span>
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Buddy wraps mental wellness, physical health, community, and purpose into one powerful membership.
-          </p>
-        </div>
+        <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
+          <div className="text-center max-w-2xl mx-auto mb-16">
+            <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">What You Get</p>
+            <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-4">
+              Everything a Founder <span className="italic text-primary">Needs</span>
+            </h2>
+            <p className="text-muted-foreground text-lg">
+              Buddy.com wraps mental wellness, physical health, community, and purpose into one powerful membership.
+            </p>
+          </div>
+        </FadeContent>
 
-        <motion.div
-          variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-100px" }}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
-        >
-          {benefits.map((b) => (
-            <motion.div
-              key={b.title}
-              variants={item}
-              className="bg-card rounded-xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
-            >
-              <div className={`${b.color} mb-4`}>
-                <b.icon size={28} strokeWidth={1.5} />
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {benefits.map((b, i) => (
+            <FadeContent key={b.title} blur={true} duration={800} easing="ease-out" initialOpacity={0} delay={i * 100}>
+              <div className="bg-card rounded-xl p-6 border border-border hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group h-full">
+                <div className={`${b.color} mb-4`}>
+                  <b.icon size={28} strokeWidth={1.5} />
+                </div>
+                <h3 className="font-display font-semibold text-lg text-foreground mb-2">{b.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
               </div>
-              <h3 className="font-display font-semibold text-lg text-foreground mb-2">{b.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
-            </motion.div>
+            </FadeContent>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

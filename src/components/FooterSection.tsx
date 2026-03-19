@@ -4,7 +4,7 @@ const FooterSection = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
-            <span className="font-display text-2xl font-bold text-golden">Buddy</span>
+            <span className="font-display text-2xl font-bold text-golden">Buddy.com</span>
             <p className="text-primary-foreground/60 text-sm mt-1">
               Wellness for Africa's Founders
             </p>
@@ -15,7 +15,7 @@ const FooterSection = () => {
             <a href="#join" className="hover:text-golden transition-colors">Join</a>
           </div>
           <p className="text-primary-foreground/40 text-xs">
-            © {new Date().getFullYear()} Buddy. All rights reserved.
+            © {new Date().getFullYear()} Buddy.com. All rights reserved.
           </p>
         </div>
       </div>

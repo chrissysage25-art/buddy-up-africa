@@ -28,17 +28,15 @@ const CommunitySection = () => {
               Whether it's weekly therapy, daily community chats, or sweating it out with your fitness Buddy — 
               you're never alone on this journey.
             </p>
-            <div className="flex gap-8">
-              {[
-                { num: "100+", label: "Active Founders" },
-                { num: "12", label: "African Countries" },
-                { num: "52", label: "Weekly Sessions/yr" },
-              ].map((stat) => (
-                <div key={stat.label}>
-                  <div className="text-2xl md:text-3xl font-display font-bold text-primary">{stat.num}</div>
-                  <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
-                </div>
-              ))}
+            <div className="mt-8">
+              <p className="text-earth-green font-semibold text-sm tracking-widest uppercase mb-4">Our Values</p>
+              <div className="flex flex-wrap gap-3">
+                {["Equality", "Empathy", "Respect", "Unity", "Spirit", "Purpose"].map((value) => (
+                  <span key={value} className="bg-primary/10 text-primary font-semibold text-sm px-4 py-2 rounded-full border border-primary/20">
+                    {value}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
 

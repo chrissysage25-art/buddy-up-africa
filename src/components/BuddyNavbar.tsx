@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const BuddyNavbar = () => {
   const [open, setOpen] = useState(false);
-
   const links = ["Benefits", "Community"];
 
   return (

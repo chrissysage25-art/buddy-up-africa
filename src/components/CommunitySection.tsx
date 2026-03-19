@@ -10,7 +10,7 @@ const CommunitySection = () => {
       <div className="container relative z-10">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>
-            <p className="text-earth-green font-semibold text-sm tracking-widest uppercase mb-3">The Buddy.com Way</p>
+            <p className="text-lime-pop font-semibold text-sm tracking-widest uppercase mb-3">The Buddy.com Way</p>
             <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-6 leading-tight">
               Built on Trust,{" "}
               <span className="italic text-primary">Not Judgement</span>
@@ -24,11 +24,18 @@ const CommunitySection = () => {
               you're never alone on this journey.
             </p>
             <div className="mt-8">
-              <p className="text-earth-green font-semibold text-sm tracking-widest uppercase mb-4">Our Values</p>
+              <p className="text-lime-pop font-semibold text-sm tracking-widest uppercase mb-4">Our Values</p>
               <div className="flex flex-wrap gap-3">
-                {["Equality", "Empathy", "Respect", "Unity", "Spirit", "Purpose"].map((value) => (
-                  <span key={value} className="bg-primary/10 text-primary font-semibold text-sm px-4 py-2 rounded-full border border-primary/20">
-                    {value}
+                {[
+                  { label: "Equality", color: "bg-electric-teal/10 text-electric-teal border-electric-teal/20" },
+                  { label: "Empathy", color: "bg-vibrant-coral/10 text-vibrant-coral border-vibrant-coral/20" },
+                  { label: "Respect", color: "bg-soft-violet/10 text-soft-violet border-soft-violet/20" },
+                  { label: "Unity", color: "bg-lime-pop/10 text-lime-pop border-lime-pop/20" },
+                  { label: "Spirit", color: "bg-golden-energy/10 text-golden-energy border-golden-energy/20" },
+                  { label: "Purpose", color: "bg-primary/10 text-primary border-primary/20" },
+                ].map((value) => (
+                  <span key={value.label} className={`${value.color} font-semibold text-sm px-4 py-2 rounded-full border`}>
+                    {value.label}
                   </span>
                 ))}
               </div>

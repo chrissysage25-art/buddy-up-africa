@@ -6,6 +6,7 @@ const plans = [
   {
     name: "Free Plan",
     tagline: "For those ready to start a startup",
+    price: "Free",
     features: [
       "WhatsApp Society of youth entrepreneurs & founders",
       "Everyday community support",
@@ -18,12 +19,13 @@ const plans = [
   {
     name: "Growing Founder Plan",
     tagline: "For founders running active startups",
+    price: "GHS 99",
     features: [
+      "Private Discord Society",
+      "Everyday community support",
       "Monthly book review",
       "Fitness plan & accountability partner",
-      "Everyday community support",
       "Weekly mental health discussions for founders",
-      "Private Discord Society",
       "Optional basic business analysis",
     ],
     accent: "lime-pop",
@@ -33,16 +35,18 @@ const plans = [
   {
     name: "Legendary Founder Plan",
     tagline: "For founders running businesses 5–10 years",
+    price: "GHS 239",
     features: [
       "Private Discord Society",
       "Everyday community support",
-      "Fitness plan & accountability partner/s",
       "Monthly book review",
-      "Be part of the child education mission",
-      "Youth founder mentorship",
-      "Monthly therapy sessions",
+      "Fitness plan & accountability partner/s",
       "Weekly mental health discussions",
+      "Monthly therapy sessions",
+      "Youth founder mentorship",
+      "Be part of the child education mission",
       "Bi-annual outdoor events",
+      "Optional basic business analysis",
     ],
     accent: "vibrant-coral",
     delay: 600,
@@ -50,15 +54,17 @@ const plans = [
   {
     name: "Grand Founder Plan",
     tagline: "For founders with 10+ years in the game",
+    price: "GHS 499",
     features: [
-      "Fitness plan & accountability Buddy",
-      "Become a mentor",
-      "Be part of the child education mission",
-      "Monthly book club with peers",
-      "Bi-annual outdoor events",
-      "Weekly therapy sessions",
       "Private Discord Society",
       "Everyday community support",
+      "Monthly book club with peers",
+      "Fitness plan & accountability Buddy",
+      "Weekly mental health discussions",
+      "Weekly therapy sessions",
+      "Become a mentor",
+      "Be part of the child education mission",
+      "Bi-annual outdoor events",
     ],
     accent: "golden-energy",
     delay: 800,
@@ -94,18 +100,18 @@ const accentStyles: Record<string, { border: string; bg: string; text: string; b
 
 const comparisonRows: { feature: string; free: boolean | string; growing: boolean | string; legendary: boolean | string; grand: boolean | string }[] = [
   { feature: "WhatsApp Society", free: true, growing: true, legendary: true, grand: true },
+  { feature: "Private Discord Society", free: false, growing: true, legendary: true, grand: true },
   { feature: "Everyday Community Support", free: true, growing: true, legendary: true, grand: true },
   { feature: "Monthly Book Review / Club", free: true, growing: true, legendary: true, grand: "Peer club" },
   { feature: "Basic Startup Resources", free: true, growing: false, legendary: false, grand: false },
-  { feature: "Private Discord Society", free: false, growing: true, legendary: true, grand: true },
   { feature: "Fitness Plan & Accountability", free: false, growing: true, legendary: true, grand: true },
-  { feature: "Weekly Mental Health Discussions", free: false, growing: true, legendary: true, grand: false },
-  { feature: "Basic Business Analysis", free: false, growing: "Optional", legendary: false, grand: false },
-  { feature: "Child Education Mission", free: false, growing: false, legendary: true, grand: true },
-  { feature: "Youth Founder Mentorship", free: false, growing: false, legendary: true, grand: false },
+  { feature: "Weekly Mental Health Discussions", free: false, growing: true, legendary: true, grand: true },
+  { feature: "Business Analysis", free: false, growing: "Optional", legendary: "Optional", grand: false },
   { feature: "Therapy Sessions", free: false, growing: false, legendary: "Monthly", grand: "Weekly" },
-  { feature: "Bi-annual Outdoor Events", free: false, growing: false, legendary: true, grand: true },
+  { feature: "Youth Founder Mentorship", free: false, growing: false, legendary: true, grand: false },
   { feature: "Become a Mentor", free: false, growing: false, legendary: false, grand: true },
+  { feature: "Child Education Mission", free: false, growing: false, legendary: true, grand: true },
+  { feature: "Bi-annual Outdoor Events", free: false, growing: false, legendary: true, grand: true },
 ];
 
 const Subscribe = () => {
@@ -164,9 +170,12 @@ const Subscribe = () => {
                     {plan.tagline}
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-foreground mb-6">
+                  <h3 className="text-xl font-display font-bold text-foreground mb-1">
                     {plan.name}
                   </h3>
+                  <p className={`text-2xl font-bold ${style.text} mb-6`}>
+                    {plan.price}<span className="text-sm font-normal text-muted-foreground">{plan.price !== "Free" ? "/mo" : ""}</span>
+                  </p>
 
                   <ul className="space-y-3 flex-1 mb-8">
                     {plan.features.map((feature) => (

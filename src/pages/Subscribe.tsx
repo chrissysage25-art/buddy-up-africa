@@ -105,7 +105,7 @@ const comparisonRows: { feature: string; free: boolean | string; growing: boolea
   { feature: "Monthly Book Review / Club", free: true, growing: true, legendary: true, grand: "Peer club" },
   { feature: "Basic Startup Resources", free: true, growing: false, legendary: false, grand: false },
   { feature: "Fitness Plan & Accountability", free: false, growing: true, legendary: true, grand: true },
-  { feature: "Weekly Mental Health Discussions", free: false, growing: true, legendary: true, grand: true },
+  { feature: "Bi-monthly Mental Health Discussions", free: false, growing: true, legendary: true, grand: true },
   { feature: "Business Analysis", free: false, growing: "Optional", legendary: "Optional", grand: false },
   { feature: "Therapy Sessions", free: false, growing: false, legendary: "Monthly", grand: "Weekly" },
   { feature: "Youth Founder Mentorship", free: false, growing: false, legendary: true, grand: false },

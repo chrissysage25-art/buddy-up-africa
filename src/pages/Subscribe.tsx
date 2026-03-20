@@ -41,7 +41,7 @@ const plans = [
       "Everyday community support",
       "Monthly book review",
       "Fitness plan & accountability partner/s",
-      "Weekly mental health discussions",
+      "Bi-monthly mental health discussions",
       "Monthly therapy sessions",
       "Youth founder mentorship",
       "Be part of the child education mission",

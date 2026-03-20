@@ -100,18 +100,18 @@ const accentStyles: Record<string, { border: string; bg: string; text: string; b
 
 const comparisonRows: { feature: string; free: boolean | string; growing: boolean | string; legendary: boolean | string; grand: boolean | string }[] = [
   { feature: "WhatsApp Society", free: true, growing: true, legendary: true, grand: true },
+  { feature: "Private Discord Society", free: false, growing: true, legendary: true, grand: true },
   { feature: "Everyday Community Support", free: true, growing: true, legendary: true, grand: true },
   { feature: "Monthly Book Review / Club", free: true, growing: true, legendary: true, grand: "Peer club" },
   { feature: "Basic Startup Resources", free: true, growing: false, legendary: false, grand: false },
-  { feature: "Private Discord Society", free: false, growing: true, legendary: true, grand: true },
   { feature: "Fitness Plan & Accountability", free: false, growing: true, legendary: true, grand: true },
-  { feature: "Weekly Mental Health Discussions", free: false, growing: true, legendary: true, grand: false },
-  { feature: "Basic Business Analysis", free: false, growing: "Optional", legendary: false, grand: false },
-  { feature: "Child Education Mission", free: false, growing: false, legendary: true, grand: true },
-  { feature: "Youth Founder Mentorship", free: false, growing: false, legendary: true, grand: false },
+  { feature: "Weekly Mental Health Discussions", free: false, growing: true, legendary: true, grand: true },
+  { feature: "Business Analysis", free: false, growing: "Optional", legendary: "Optional", grand: false },
   { feature: "Therapy Sessions", free: false, growing: false, legendary: "Monthly", grand: "Weekly" },
-  { feature: "Bi-annual Outdoor Events", free: false, growing: false, legendary: true, grand: true },
+  { feature: "Youth Founder Mentorship", free: false, growing: false, legendary: true, grand: false },
   { feature: "Become a Mentor", free: false, growing: false, legendary: false, grand: true },
+  { feature: "Child Education Mission", free: false, growing: false, legendary: true, grand: true },
+  { feature: "Bi-annual Outdoor Events", free: false, growing: false, legendary: true, grand: true },
 ];
 
 const Subscribe = () => {

@@ -1,0 +1,196 @@
+import { Link } from "react-router-dom";
+import FadeContent from "@/components/FadeContent";
+import { Check, ArrowLeft } from "lucide-react";
+
+const plans = [
+  {
+    name: "Free Plan",
+    tagline: "For those ready to start a startup",
+    features: [
+      "WhatsApp Society of youth entrepreneurs & founders",
+      "Everyday community support",
+      "Monthly book review",
+      "Basic startup resources",
+    ],
+    accent: "electric-teal",
+    delay: 200,
+  },
+  {
+    name: "Growing Founder Plan",
+    tagline: "For founders running active startups",
+    features: [
+      "Monthly book review",
+      "Fitness plan & accountability partner",
+      "Everyday community support",
+      "Weekly mental health discussions for founders",
+      "Private Discord Society",
+      "Optional basic business analysis",
+    ],
+    accent: "lime-pop",
+    popular: true,
+    delay: 400,
+  },
+  {
+    name: "Legendary Founder Plan",
+    tagline: "For founders running businesses 5–10 years",
+    features: [
+      "Private Discord Society",
+      "Everyday community support",
+      "Fitness plan & accountability partner/s",
+      "Monthly book review",
+      "Be part of the child education mission",
+      "Youth founder mentorship",
+      "Monthly therapy sessions",
+      "Weekly mental health discussions",
+      "Bi-annual outdoor events",
+    ],
+    accent: "vibrant-coral",
+    delay: 600,
+  },
+  {
+    name: "Grand Founder Plan",
+    tagline: "For founders with 10+ years in the game",
+    features: [
+      "Fitness plan & accountability Buddy",
+      "Become a mentor",
+      "Be part of the child education mission",
+      "Monthly book club with peers",
+      "Bi-annual outdoor events",
+      "Weekly therapy sessions",
+      "Private Discord Society",
+      "Everyday community support",
+    ],
+    accent: "golden-energy",
+    delay: 800,
+  },
+];
+
+const accentStyles: Record<string, { border: string; bg: string; text: string; badge: string }> = {
+  "electric-teal": {
+    border: "border-electric-teal/30",
+    bg: "bg-electric-teal/10",
+    text: "text-electric-teal",
+    badge: "bg-electric-teal text-primary-foreground",
+  },
+  "lime-pop": {
+    border: "border-lime-pop/30",
+    bg: "bg-lime-pop/10",
+    text: "text-lime-pop",
+    badge: "bg-lime-pop text-primary-foreground",
+  },
+  "vibrant-coral": {
+    border: "border-vibrant-coral/30",
+    bg: "bg-vibrant-coral/10",
+    text: "text-vibrant-coral",
+    badge: "bg-vibrant-coral text-accent-foreground",
+  },
+  "golden-energy": {
+    border: "border-golden-energy/30",
+    bg: "bg-golden-energy/10",
+    text: "text-golden-energy",
+    badge: "bg-golden-energy text-primary-foreground",
+  },
+};
+
+const Subscribe = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Header */}
+      <div className="bg-warm-gradient relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_30%_50%,hsl(174,72%,46%,0.4),transparent_60%)]" />
+        <div className="container relative z-10 pt-8 pb-16 md:pb-24">
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 text-secondary-foreground/70 hover:text-electric-teal transition-colors mb-8 text-sm"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </Link>
+
+          <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0}>
+            <p className="text-electric-teal font-semibold text-sm tracking-widest uppercase mb-4">
+              Choose Your Path
+            </p>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-secondary-foreground leading-tight mb-4">
+              Find Your <span className="italic text-electric-teal">Buddy</span> Plan
+            </h1>
+            <p className="text-secondary-foreground/70 text-lg max-w-2xl leading-relaxed">
+              Every plan connects you with a community that cares about the whole you — mind, body, and purpose. Select the tier that matches your journey.
+            </p>
+          </FadeContent>
+        </div>
+      </div>
+
+      {/* Plans Grid */}
+      <div className="container py-16 md:py-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          {plans.map((plan) => {
+            const style = accentStyles[plan.accent];
+            return (
+              <FadeContent
+                key={plan.name}
+                blur
+                duration={1000}
+                easing="ease-out"
+                initialOpacity={0}
+                delay={plan.delay}
+              >
+                <div
+                  className={`relative rounded-xl border ${style.border} bg-card p-6 h-full flex flex-col transition-all hover:shadow-lg hover:scale-[1.02]`}
+                >
+                  {plan.popular && (
+                    <span className={`absolute -top-3 left-6 px-3 py-1 rounded-full text-xs font-bold ${style.badge}`}>
+                      Most Popular
+                    </span>
+                  )}
+
+                  <div className={`inline-flex w-fit px-3 py-1 rounded-full text-xs font-medium ${style.bg} ${style.text} mb-4`}>
+                    {plan.tagline}
+                  </div>
+
+                  <h3 className="text-xl font-display font-bold text-foreground mb-6">
+                    {plan.name}
+                  </h3>
+
+                  <ul className="space-y-3 flex-1 mb-8">
+                    {plan.features.map((feature) => (
+                      <li key={feature} className="flex items-start gap-3 text-sm text-muted-foreground">
+                        <Check className={`w-4 h-4 mt-0.5 shrink-0 ${style.text}`} />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <a
+                    href="https://forms.gle/placeholder"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`block text-center px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90 ${style.badge}`}
+                  >
+                    Subscribe To Join The Waitlist
+                  </a>
+                </div>
+              </FadeContent>
+            );
+          })}
+        </div>
+
+        {/* Onboarding notice */}
+        <FadeContent blur duration={1000} easing="ease-out" initialOpacity={0} delay={1000}>
+          <div className="mt-16 max-w-2xl mx-auto text-center">
+            <div className="rounded-xl border border-border bg-card p-8">
+              <h3 className="text-lg font-display font-bold text-foreground mb-3">
+                What Happens After You Subscribe?
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                Within <strong className="text-foreground">24 hours</strong> of subscribing, our team will reach out to you for a personal onboarding call. During this call we'll confirm your subscription, understand your needs, and get you set up in your chosen society — <em>before any payment is required</em>.
+              </p>
+            </div>
+          </div>
+        </FadeContent>
+      </div>
+    </div>
+  );
+};
+
+export default Subscribe;

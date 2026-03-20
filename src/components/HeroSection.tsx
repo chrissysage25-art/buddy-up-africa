@@ -31,10 +31,10 @@ const HeroSection = () => {
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} delay={800}>
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#join"
+                href="/subscribe"
                 className="bg-primary text-primary-foreground px-8 py-4 rounded-lg text-base font-semibold hover:opacity-90 transition-opacity text-center"
               >
-                Become a Buddy
+                Join the Waitlist
               </a>
               <a
                 href="#benefits"

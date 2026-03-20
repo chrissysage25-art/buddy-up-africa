@@ -18,7 +18,7 @@ const CTASection = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="#"
+                href="/subscribe"
                 className="bg-primary text-primary-foreground px-10 py-4 rounded-lg font-semibold text-base hover:opacity-90 transition-opacity"
               >
                 Join the Waitlist

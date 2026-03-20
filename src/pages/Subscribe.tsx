@@ -170,9 +170,12 @@ const Subscribe = () => {
                     {plan.tagline}
                   </div>
 
-                  <h3 className="text-xl font-display font-bold text-foreground mb-6">
+                  <h3 className="text-xl font-display font-bold text-foreground mb-1">
                     {plan.name}
                   </h3>
+                  <p className={`text-2xl font-bold ${style.text} mb-6`}>
+                    {plan.price}<span className="text-sm font-normal text-muted-foreground">{plan.price !== "Free" ? "/mo" : ""}</span>
+                  </p>
 
                   <ul className="space-y-3 flex-1 mb-8">
                     {plan.features.map((feature) => (

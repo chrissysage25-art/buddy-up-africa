@@ -25,7 +25,7 @@ const plans = [
       "Everyday community support",
       "Monthly book review",
       "Fitness plan & accountability partner",
-      "Weekly mental health discussions for founders",
+      "Bi-monthly mental health discussions for founders",
       "Optional basic business analysis",
     ],
     accent: "lime-pop",

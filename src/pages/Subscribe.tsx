@@ -54,7 +54,7 @@ const plans = [
   {
     name: "Grand Founder Plan",
     tagline: "For founders with 10+ years in the game",
-    price: "GHS 499",
+    price: "$33",
     features: [
       "Private Discord Society",
       "Everyday community support",

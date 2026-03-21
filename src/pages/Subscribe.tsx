@@ -35,7 +35,7 @@ const plans = [
   {
     name: "Legendary Founder Plan",
     tagline: "For founders running businesses 5–10 years",
-    price: "GHS 239",
+    price: "$16",
     features: [
       "Private Discord Society",
       "Everyday community support",

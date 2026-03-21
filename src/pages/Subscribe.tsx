@@ -19,7 +19,7 @@ const plans = [
   {
     name: "Growing Founder Plan",
     tagline: "For founders running active startups",
-    price: "GHS 99",
+    price: "$7",
     features: [
       "Private Discord Society",
       "Everyday community support",
@@ -35,7 +35,7 @@ const plans = [
   {
     name: "Legendary Founder Plan",
     tagline: "For founders running businesses 5–10 years",
-    price: "GHS 239",
+    price: "$16",
     features: [
       "Private Discord Society",
       "Everyday community support",
@@ -54,7 +54,7 @@ const plans = [
   {
     name: "Grand Founder Plan",
     tagline: "For founders with 10+ years in the game",
-    price: "GHS 499",
+    price: "$33",
     features: [
       "Private Discord Society",
       "Everyday community support",

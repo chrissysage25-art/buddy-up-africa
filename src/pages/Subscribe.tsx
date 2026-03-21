@@ -19,7 +19,7 @@ const plans = [
   {
     name: "Growing Founder Plan",
     tagline: "For founders running active startups",
-    price: "$7",
+    price: "$9",
     features: [
       "Private Discord Society",
       "Everyday community support",

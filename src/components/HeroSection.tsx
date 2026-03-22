@@ -25,7 +25,7 @@ const HeroSection = () => {
           </FadeContent>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} delay={600}>
             <p className="text-lg md:text-xl text-secondary-foreground/75 max-w-xl mb-8 font-body leading-relaxed">
-              A holistic wellness community built for African founders — combining mental health support, physical fitness, mentorship, and deep community bonds.
+              We help you access unique international networks and mentorships through discussions and memorable moments. Welcome to Buddy.com
             </p>
           </FadeContent>
           <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0} delay={800}>

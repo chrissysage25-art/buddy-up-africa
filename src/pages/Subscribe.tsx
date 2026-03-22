@@ -187,7 +187,7 @@ const Subscribe = () => {
                   </ul>
 
                   <a
-                    href="https://forms.gle/placeholder"
+                    href="https://forms.gle/YA9kEN7bgn1qscDt5"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block text-center px-6 py-3 rounded-lg font-semibold text-sm transition-opacity hover:opacity-90 ${style.badge}`}

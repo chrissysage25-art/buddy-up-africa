@@ -206,23 +206,24 @@ const Subscribe = () => {
             <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground text-center mb-8">
               Compare Plans at a Glance
             </h2>
+            <p className="text-muted-foreground text-sm text-center mb-3 md:hidden">← Swipe to compare plans →</p>
             <div className="overflow-x-auto rounded-xl border border-border">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="bg-muted/50">
-                    <th className="text-left p-4 font-display font-semibold text-foreground min-w-[200px]">Feature</th>
-                    <th className="p-4 text-center font-display font-semibold text-electric-teal min-w-[120px]">Free</th>
-                    <th className="p-4 text-center font-display font-semibold text-lime-pop min-w-[120px]">Growing</th>
-                    <th className="p-4 text-center font-display font-semibold text-vibrant-coral min-w-[120px]">Legendary</th>
-                    <th className="p-4 text-center font-display font-semibold text-golden-energy min-w-[120px]">Grand</th>
+                    <th className="text-left p-3 md:p-4 font-display font-semibold text-foreground min-w-[150px] md:min-w-[200px] sticky left-0 bg-muted/50 z-10">Feature</th>
+                    <th className="p-3 md:p-4 text-center font-display font-semibold text-electric-teal min-w-[90px] md:min-w-[120px]">Free</th>
+                    <th className="p-3 md:p-4 text-center font-display font-semibold text-lime-pop min-w-[90px] md:min-w-[120px]">Growing</th>
+                    <th className="p-3 md:p-4 text-center font-display font-semibold text-vibrant-coral min-w-[90px] md:min-w-[120px]">Legendary</th>
+                    <th className="p-3 md:p-4 text-center font-display font-semibold text-golden-energy min-w-[90px] md:min-w-[120px]">Grand</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonRows.map((row, i) => (
                     <tr key={row.feature} className={i % 2 === 0 ? "bg-card" : "bg-muted/20"}>
-                      <td className="p-4 text-foreground font-medium">{row.feature}</td>
+                      <td className={`p-3 md:p-4 text-foreground font-medium sticky left-0 z-10 ${i % 2 === 0 ? "bg-card" : "bg-muted/20"}`}>{row.feature}</td>
                       {[row.free, row.growing, row.legendary, row.grand].map((val, j) => (
-                        <td key={j} className="p-4 text-center">
+                        <td key={j} className="p-3 md:p-4 text-center">
                           {val === true ? (
                             <Check className="w-5 h-5 text-electric-teal mx-auto" />
                           ) : val === false ? (
